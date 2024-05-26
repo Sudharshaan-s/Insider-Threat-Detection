@@ -41,6 +41,11 @@ The model's performance is evaluated by examining the distribution of anomaly sc
 - scikit-learn
 - matplotlib
 
+To run the insider threat detection system:
+Clone the repository
+```bash
+git clone https://github.com/your-repo/insider-threat-detection.git
+```
 Install the dependencies using the following command:
 ```bash
 pip install -r requirements.txt
