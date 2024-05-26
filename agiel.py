@@ -1,8 +1,6 @@
-
 '''
 Insider_Threat_Detection
 '''
-
 import numpy as np 
 import pandas as pd
 
@@ -25,7 +23,7 @@ log_fields_list = [
 		["date", "employee", "url"],				
 		]
 
-# We create features & encode them thats why we create a dict to track these(We will add features/functions)
+
 features = 0
 features_map = {}
 
@@ -40,14 +38,12 @@ def funcstruct():
 			activity, [to, cc, bcc], filename, activity, url
 		''')
 
-# Here we hand-engineer the features
 def add_feature(name):
 	if name not in feature_map:
 		global features
 		feature_map[name] = features
 		features += 1
 
-		# Features to add to the dict
 		add_feature("Weekday_Logon_Normal")
 		add_feature("Weekday_Logon_After")
 		add_feature("Weekend_Logon")
@@ -68,7 +64,7 @@ def add_feature(name):
 		add_feature("url")
 
 
-# Define a function to note the filetype if its copied to a removable devies | recording file_ext of the file used
+
 def file_feat(row):
 	if row["filename"].endswith(".exe"):
 		return feature_map["File_exe"]

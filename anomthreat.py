@@ -7,7 +7,6 @@ threat_actors = [
 	"AAM0658",
 	"AJR0932",
 	"BDV0168",
-	<snip>
 	"MSO0222"
 ]
 
@@ -66,7 +65,7 @@ plt.ylabel("Percentage")
 plt.title("Anomaly score for normal")
 
 anomaly_scores = IF.decision_function(X_train_threat)
-fit = plt.figure(figsize=(8, 4), dpi=600, facecolor="w", edge)
+fit = plt.figure(figsize=(8, 4), dpi=600, facecolor="w")
 anomaly = plt.hist(anomaly_scores, 50, density=True)
 
 plt.xlim((-0.2, 0.2))
