@@ -1,5 +1,3 @@
-# Coded by: Qyfashae
-
 import ftplib
  
 # Fill Required Information

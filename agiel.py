@@ -1,6 +1,6 @@
 
 '''
-Feat-Eng for IDS-Insider_Threat_Detection
+Insider_Threat_Detection
 '''
 
 import numpy as np 
@@ -29,7 +29,7 @@ log_fields_list = [
 features = 0
 features_map = {}
 
-# Exp
+
 def funcstruct():
 	print('''
 		Engine for Insider Threat Detection.
@@ -167,6 +167,9 @@ cols_to_keep = ["date", "user", "feature"]
 df = df["cols_to_keep"]
 df["date"] = df.apply(date_to_day, axis=1)
 dfs.append(df)
-	joint = pd.concat(dfs)
-	joint = joint.sort_values(by="date")
 
+
+	joint = pd.concat(dfs)
+
+
+	joint = joint.sort_values(by="date")
